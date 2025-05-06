@@ -9,6 +9,27 @@
 5. Después de la aprobación, fusionar con la rama development
 6. Semanalmente se mergeara todo lo que contenga development con la rama main para producción
 
+### Instalación
+1. Clonar el repositorio:
+```bash
+git clone [URL_DEL_REPOSITORIO]
+cd byCarket--front
+```
+
+2. Instalar dependencias:
+```bash
+npm install
+```
+
+3. Configurar variables de entorno:
+   - Crear archivo `.env` basado en `.env.example`
+   - Configurar las credenciales de Auth0 y otras variables necesarias
+
+4. Iniciar el servidor de desarrollo:
+```bash
+npm run dev
+```
+
 
 ### Idioma
 - **Código**: Todo el código (variables, funciones, nombres de archivos, etc.) debe estar en inglés.
@@ -80,23 +101,24 @@ Utilizamos Auth0 para gestionar la autenticación de usuarios. A continuación s
 ## Sistema de gestión de pagos
 URL: https://docs.vexorpay.com/en/docs/core/get-started
 
-### Instalación
-1. Clonar el repositorio:
-```bash
-git clone [URL_DEL_REPOSITORIO]
-cd byCarket--front
-```
-
-2. Instalar dependencias:
-```bash
-npm install
-```
-
-3. Configurar variables de entorno:
-   - Crear archivo `.env` basado en `.env.example`
-   - Configurar las credenciales de Auth0 y otras variables necesarias
-
-4. Iniciar el servidor de desarrollo:
-```bash
-npm run dev
-```
+### FORMULARIOS DEL FRONT
+- **Biblioteca**: Todos los formularios se implementan con Formik
+- **Validaciones**: Todas las validaciones se realizan con Yup
+- **Validaciones personalizadas**: Se pueden implementar expresiones regulares (regex) según las necesidades específicas de cada campo
+- **Estructura recomendada**:
+  ```jsx
+  const validationSchema = Yup.object({
+    fieldName: Yup.string().required('Campo requerido')
+  });
+  
+  const FormComponent = () => {
+    return (
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {/* Contenido del formulario */}
+      </Formik>
+    );
+  };
