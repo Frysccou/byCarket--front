@@ -6,14 +6,14 @@
 - **Interfaz de Usuario**: Todos los textos visibles para el usuario final deben estar en español.
 
 ### Nomenclatura
-- **Componentes**: PascalCase (ej. `UserProfile.jsx`)
+- **Componentes**: PascalCase (ej. `UserProfile.tsx`)
 - **Funciones**: camelCase (ej. `getUserData()`)
 - **Variables**: camelCase (ej. `userData`)
 - **Constantes**: UPPER_SNAKE_CASE (ej. `API_URL`)
 
 ## Estándares de Comentarios
 
-### Better Comments
+### Better Comments (EXTENSION INSTALAR)
 Utilizamos la extensión Better Comments para mejorar la legibilidad de nuestros comentarios. Los prefijos son:
 
 - `!` - Para comentarios críticos o advertencias importantes
@@ -45,6 +45,9 @@ Utilizamos Auth0 para gestionar la autenticación de usuarios. A continuación s
 - [Documentación oficial de Auth0](https://auth0.com/docs)
 - [Manejo de roles y permisos](https://auth0.com/docs/authorization/rbac)
 
+## Sistema de gestión de pagos
+URL: https://docs.vexorpay.com/en/docs/core/get-started
+
 ### Instalación
 1. Clonar el repositorio:
 ```bash
@@ -63,7 +66,7 @@ npm install
 
 4. Iniciar el servidor de desarrollo:
 ```bash
-npm start
+npm run dev
 ```
 
 ### Flujo de trabajo
@@ -71,4 +74,5 @@ npm start
 2. Desarrollar y probar localmente
 3. Asegurarse de que el código sigue las convenciones establecidas
 4. Crear un Pull Request para revisión
-5. Después de la aprobación, fusionar con la rama principal
+5. Después de la aprobación, fusionar con la rama development
+6. Semanalmente se mergeara todo lo que contenga development con la rama main para producción
