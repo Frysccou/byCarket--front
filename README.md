@@ -1,6 +1,15 @@
 
 # byCarket - Documentación del Proyecto
 
+### Flujo de trabajo
+1. Crear una nueva rama para cada característica o corrección
+2. Desarrollar y probar localmente
+3. Asegurarse de que el código sigue las convenciones establecidas
+4. Crear un Pull Request para revisión
+5. Después de la aprobación, fusionar con la rama development
+6. Semanalmente se mergeara todo lo que contenga development con la rama main para producción
+
+
 ### Idioma
 - **Código**: Todo el código (variables, funciones, nombres de archivos, etc.) debe estar en inglés.
 - **Interfaz de Usuario**: Todos los textos visibles para el usuario final deben estar en español.
@@ -10,6 +19,29 @@
 - **Funciones**: camelCase (ej. `getUserData()`)
 - **Variables**: camelCase (ej. `userData`)
 - **Constantes**: UPPER_SNAKE_CASE (ej. `API_URL`)
+
+
+### Arquitectura de Desarrollo
+Componentes de servidor: Todas las páginas se desarrollarán como componentes de servidor por default
+
+Estructura de importación: Cada página importará una vista (view) principal, y esta vista importará todos los componentes necesarios
+
+### Modularización
+Componentes reutilizables: Priorizamos la creación de componentes modulares y reutilizables
+
+### Carpetas
+- `components`: Contiene todos los componentes reutilizables, y subcarpetas por categoría
+- `contexts`: Contiene los contextos del sitio web
+- `pages`: Contiene las páginas principales del sitio
+- `views`: Contiene las vistas principales de cada página
+- `utils`: Contiene funciones y utilidades reutilizables
+-`services`: Contiene servicios de conexión a la base de datos y configuraciones del navegador
+
+### Directiva "use client"
+Utilizaremos la directiva "use client" exclusivamente cuando sea necesario para:
+- Componentes que requieran interactividad del lado del cliente
+- Componentes que utilicen hooks de React
+- Componentes que manejen eventos del usuario
 
 ## Estándares de Comentarios
 
@@ -68,11 +100,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-### Flujo de trabajo
-1. Crear una nueva rama para cada característica o corrección
-2. Desarrollar y probar localmente
-3. Asegurarse de que el código sigue las convenciones establecidas
-4. Crear un Pull Request para revisión
-5. Después de la aprobación, fusionar con la rama development
-6. Semanalmente se mergeara todo lo que contenga development con la rama main para producción
