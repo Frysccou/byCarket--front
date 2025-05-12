@@ -122,3 +122,50 @@ URL: https://docs.vexorpay.com/en/docs/core/get-started
       </Formik>
     );
   };
+
+  # Configuración de Colores y Fuentes Globales
+
+Este documento describe la configuración de colores y fuentes que debemos priorizar y utilizar consistentemente en nuestro proyecto.
+
+## Colores Base (Definidos en `:root`)
+
+Hemos definido los siguientes colores base en la sección `:root` de nuestro archivo CSS global:
+
+```css
+:root {
+    --principal-blue: #103663;
+    --secondary-blue: #4A77A8;
+}
+--principal-blue: #103663 - Este es nuestro color azul principal de la marca. Debe ser utilizado como color base para elementos importantes, como fondos principales, acentos primarios y cualquier lugar donde queramos destacar la identidad de la marca.
+
+--secondary-blue: #4A77A8 - Esta es una tonalidad más clara de nuestro azul principal, pensada para detalles, acentos secundarios o elementos que necesiten diferenciarse ligeramente del color principal sin perder la coherencia visual.
+
+Prioridad de Uso: Siempre que necesitemos aplicar los colores base de la marca, debemos utilizar estas variables CSS (var(--principal-blue) y var(--secondary-blue)) para asegurar la consistencia en toda la aplicación.
+
+Fuentes (Importadas)
+Hemos importado las siguientes fuentes de Google Fonts para diferentes propósitos:
+
+CSS
+
+/* Fuente 1: Be Vietnam Pro - Para botones y elementos de la interfaz */
+@import url('[https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap](https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap)');
+
+/* Fuente 2: Climate Crisis - Para títulos principales */
+@import url('[https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap](https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap)');
+
+/* Fuente 3: Questrial - Para subtítulos */
+@import url('[https://fonts.googleapis.com/css2?family=Questrial&display=swap](https://fonts.googleapis.com/css2?family=Questrial&display=swap)');
+
+/* Fuente 4: Inter - Para números o porcentajes */
+@import url('[https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap](https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap)');
+Be Vietnam Pro: Utilizar principalmente para el texto de los botones y otros elementos de la interfaz de usuario donde la legibilidad y un estilo moderno son importantes.
+
+Climate Crisis: Reservada para los títulos principales. Su estilo distintivo ayudará a que los encabezados de sección o página resalten.
+
+Questrial: Ideal para subtítulos, proporcionando una lectura clara y complementando los títulos.
+
+Inter: Destinada para la visualización de números o porcentajes, ofreciendo una tipografía con buena claridad para datos.
+
+Prioridad de Uso: Al aplicar estilos de texto, debemos priorizar el uso de estas fuentes según el propósito indicado. Esto ayudará a mantener una jerarquía visual clara y una estética consistente en toda la aplicación.
+
+Recuerda que esta configuración de colores y fuentes es fundamental para la identidad visual de nuestra aplicación. Siempre que sea posible, utilicemos estas definiciones para mantener la coherencia.
