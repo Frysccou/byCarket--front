@@ -9,6 +9,48 @@
 5. Después de la aprobación, fusionar con la rama development
 6. Semanalmente se mergeara todo lo que contenga development con la rama main para producción
 
+### Estructura de las ramas
+- `main`: Rama principal para producción
+- `development`: Rama principal para desarrollo
+- `feature/[nombre_de_la_funcionalidad]`: Ramas para nuevas características
+- `bugfix/[nombre_del_fix]`: Ramas para correcciones de errores
+
+### Etiquetas de Git
+- `feat`: Nueva característica
+- `fix`: Corrección de bug
+- `docs`: Cambios en la documentación
+- `style`: Cambios de formato (espacios, semicolons, etc.)
+- `refactor`: Refactorización del código
+- `perf`: Cambios de rendimiento
+- `test`: Cambios en pruebas
+- `chore`: Tareas de mantenimiento
+- `ci`: Cambios en la configuración de CI/CD
+- `build`: Cambios en la construcción del proyecto
+- `release`: Versiones de lanzamiento
+
+## 📌 Reglas para nunca pisarse
+### 1️⃣ Una feature = una rama
+> Nunca trabajar más de una cosa en la misma rama. Si estás haciendo un componente nuevo, hazlo en una rama del tipo `feature/header-component`. Si tienes que arreglar algo, rama nueva.
+
+### 2️⃣ Nadie toca *develop* ni *main* directo
+> Todo va por PR (Pull Request) desde *feature* a *develop*. Nunca pushear directo.
+
+### 3️⃣ Antes de mergear: actualiza tu rama
+> Siempre trae los últimos cambios de *develop* antes de mergear para evitar conflictos.
+
+**COMANDOS:**
+```bash
+git checkout feature/tu-rama
+git fetch origin
+git merge origin/develop
+```
+
+### 4️⃣ Después de mergear, borra tu rama
+> Una vez que la rama esté mergeada, automáticamente bórrala. Evita confusión y errores.
+
+### 5️⃣ Mergear desde develop a main
+> Una vez que se hayan realizado cambios en *develop* y se hayan validado, se puede hacer un merge de *develop* a *main*. 
+
 ### Instalación
 1. Clonar el repositorio:
 ```bash
