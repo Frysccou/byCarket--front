@@ -1,9 +1,17 @@
 import React from "react";
 
 const Navbar = () => {
-	return <div>Navbar</div>;
+	return (
+		<>
+			<nav>
+				<ul>
+					<li>
+						<a href='/home'></a>
+					</li>
+				</ul>
+			</nav>
+		</>
+	);
 };
 
 export default Navbar;
-
-<nav> HOLA MUNDO NAV</nav>
